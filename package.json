@@ -1,0 +1,29 @@
+{
+  "name": "playwrightproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "Tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "testInOneBrowser": "npx playwright test --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "allure-playwright": "^2.0.0-beta.15",
+    "faker": "^6.6.6",
+    "playwright": "^1.19.1"
+  },
+  "dependencies": {
+    "-": "^0.0.1",
+    "@playwright/test": "^1.19.1",
+    "@types/faker": "^6.6.9",
+    "allure": "^0.0.0",
+    "D": "^1.0.0",
+    "dotenv": "^16.0.0"
+  }
+}
