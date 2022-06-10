@@ -64,7 +64,6 @@ export class CartPage extends HomePage {
                 const itemRowCellDetails = itemRows.locator('td').nth(i + 1);
                 expect(await itemRowCellDetails.innerText()).toBe(productDetailsArray[i]);
                 await this.deleteItemFromCart();
-                break;
             }
         }
     }
