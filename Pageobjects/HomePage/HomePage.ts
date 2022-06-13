@@ -55,9 +55,12 @@ export class HomePage extends BasePage {
     }
 
     /**@description this function is a login function that logs in to DemoBlaze website with the correct credentials by default
-     * @param credentials are the username and password that are called from the dotenv file
+     * @param credentials the username and password that are called from the dotenv file to make it more secure
+     * @defaultValue Credentials.Correct
      */
-    public async login(username: string, password: string) {
+    public async login(credentials: Credentials = Credentials.CORRECT) {
+        const username: string = (credentials == Credentials.CORRECT) ? process.env.USERNAME : 'incorrect username';
+        const password: string = (credentials == Credentials.CORRECT) ? process.env.PASSWORD : 'incorrect password';
         await this.clickElement(this.loginMenuLocator);
         await this.fillText(this.loginDialogUsernameField, username);
         await this.fillText(this.loginDialogPasswordField, password);
