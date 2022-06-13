@@ -54,18 +54,30 @@ export class HomePage extends BasePage {
 
     }
 
-    /**@description this function is a login function that logs in to DemoBlaze website with the correct credentials by default
-     * @param credentials the username and password that are called from the dotenv file to make it more secure
-     * @defaultValue Credentials.Correct
-     */
-    public async login(credentials: Credentials = Credentials.CORRECT) {
-        const username: string = (credentials == Credentials.CORRECT) ? process.env.USERNAME : 'incorrect username';
-        const password: string = (credentials == Credentials.CORRECT) ? process.env.PASSWORD : 'incorrect password';
+    
+     public async login(username: string, password: string) {
         await this.clickElement(this.loginMenuLocator);
         await this.fillText(this.loginDialogUsernameField, username);
         await this.fillText(this.loginDialogPasswordField, password);
         await this.clickElement(this.dialogPrimaryButtonLocator);
     }
+    
+    
+      *@description this function is a login function that logs in to DemoBlaze website with the correct credentials by default
+     * @param credentials the username and password that are called from the dotenv file to make it more secure
+     * @defaultValue Credentials.Correct
+    
+    
+    //another secure way to login using the dotenv file
+    // public async login(credentials: Credentials = Credentials.CORRECT) {
+    //     const username: string = (credentials == Credentials.CORRECT) ? process.env.USERNAME : 'incorrect username';
+    //     const password: string = (credentials == Credentials.CORRECT) ? process.env.PASSWORD : 'incorrect password';
+    //     await this.clickElement(this.loginMenuLocator);
+    //     await this.fillText(this.loginDialogUsernameField, username);
+    //     await this.fillText(this.loginDialogPasswordField, password);
+    //     await this.clickElement(this.dialogPrimaryButtonLocator);
+    // }
+    
 
     /**@description this function validates the name of the user in the upper tab menu after logging in
      * @param nameOfUser the name of the user in the upper menu tab
