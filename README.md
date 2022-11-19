@@ -6,4 +6,4 @@
 
   * as part of the project I wrote end to end tests, executed all tests, recieved reports, analyzed results
   
-  * for reporting I used allure to recieve well desgiend and structured reports
+  * for reporting I used allure reports to recieve well desgiend and structured reports based on how I tag and orginize each and every test.
