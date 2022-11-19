@@ -1,4 +1,7 @@
-  Hello,
-  this is my Automation project written in TypeScript Playwright.
-where I write an infrastructure for the DemoBlaze Website in Playwright framewrok for UI end to end automation testing in TypeScript language.
-in this project I wrote infrastructure for DemoBlaze website and executed the tests for the web's UI and functionality 
+  #Playwright Project
+  
+  * This is an automation infrastructure that was developed in TypeScript using Playwright test automation framework for UI end to end tests.
+  
+  * The infra was developed on the DemoBlaze Website in the page object model design pattern 
+
+  * as part of the project I wrote end to end tests, executed all tests, recieved reports, analyzed results
